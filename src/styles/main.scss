@@ -1,0 +1,9 @@
+@import "./fonts.scss";
+
+section {
+  @apply px-5;
+
+  & > div {
+    @apply max-w-[1296px] mx-auto;
+  }
+}

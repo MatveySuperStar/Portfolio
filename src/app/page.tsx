@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const viewProjects = projects.reverse().map((item) => (
-    <Link href={item.href} key={item.href}>
+  const viewProjects = projects.map((item) => (
+    <Link href={item.href} key={item.href} target="_blank">
       <div className="w-full border lg:[&_img]:hover:scale-105">
         <figure className="relative w-full h-[400px] overflow-hidden">
           <Image

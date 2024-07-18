@@ -15,46 +15,9 @@ import myvision from "@/public/projects/my-vision.png";
 
 export const projects = [
   {
-    title: "remont-stolin",
-    image: remontStolin,
-    href: "https://vercel.com/matveys-projects-69b106dd/remont-stolin",
-  },
-  {
-    title: "monument",
-    image: monument,
-    href: "https://monuments-flame.vercel.app/",
-  },
-  { title: "sauletta", image: sauletta, href: "https://sauletta.vercel.app/" },
-  { title: "balmy", image: balmy, href: "https://balmy.by/" },
-  { title: "myvision", image: myvision, href: "https://my-vision.vercel.app/" },
-  { title: "film pro", image: filmPro, href: "https://film-pro.vercel.app/" },
-
-  {
-    title: "lux home",
-    image: luxHome,
-    href: "https://vercel.com/matveys-projects-69b106dd/lux-home",
-  },
-  {
-    title: "amp",
-    image: amp,
-    href: "https://vercel.com/matveys-projects-69b106dd/amp",
-  },
-
-  {
-    title: "AEF",
-    image: aef,
-    href: "https://vercel.com/matveys-projects-69b106dd/alfa-euro-stroy/9Bs74ykYjpjgRdeggFrZuPZ75fhZ",
-  },
-  {
-    title: "prokatchik",
-    image: prokatchik,
-    href: "https://prokatchik.vercel.app/",
-  },
-  { title: "web space", image: webSpace, href: "https://web-space.by" },
-  {
-    title: "master mod",
-    image: masterMod,
-    href: "https://master-mod.vercel.app/",
+    title: "royalspa",
+    image: royal,
+    href: "http://178.172.244.147:3000/",
   },
   {
     title: "bauntyspa",
@@ -62,8 +25,44 @@ export const projects = [
     href: "https://bauntyspa.by/",
   },
   {
-    title: "royalspa",
-    image: royal,
-    href: "http://178.172.244.147:3000/",
+    title: "master mod",
+    image: masterMod,
+    href: "https://master-mod.vercel.app/",
   },
+  { title: "web space", image: webSpace, href: "https://web-space.by" },
+  {
+    title: "AEF",
+    image: aef,
+    href: "https://alfa-euro-stroy.vercel.app/",
+  },
+  {
+    title: "prokatchik",
+    image: prokatchik,
+    href: "https://prokatchik.vercel.app/",
+  },
+  {
+    title: "amp",
+    image: amp,
+    href: "https://amp-lemon-tau.vercel.app/",
+  },
+
+  {
+    title: "lux home",
+    image: luxHome,
+    href: "https://lux-home.vercel.app/",
+  },
+  { title: "balmy", image: balmy, href: "https://balmy.by/" },
+  { title: "myvision", image: myvision, href: "https://my-vision.vercel.app/" },
+  { title: "film pro", image: filmPro, href: "https://film-pro.vercel.app/" },
+  {
+    title: "remont-stolin",
+    image: remontStolin,
+    href: "https://remont-stolin.vercel.app/",
+  },
+  {
+    title: "monument",
+    image: monument,
+    href: "https://monuments-flame.vercel.app/",
+  },
+  { title: "sauletta", image: sauletta, href: "https://sauletta.vercel.app/" },
 ];

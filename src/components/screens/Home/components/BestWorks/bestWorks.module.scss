@@ -1,0 +1,23 @@
+.works {
+  @apply grid grid-cols-1 md:grid-cols-[repeat(2,auto)] justify-between pt-20 gap-y-10 md:gap-y-[100px] gap-x-[100px] pb-[200px];
+
+  & > a {
+    @apply duration-1000 relative opacity-0;
+
+    &:nth-child(2n) {
+      @apply md:top-[0px] top-[-50px];
+
+      &.visible {
+        @apply md:top-[200px] top-0 opacity-100;
+      }
+    }
+
+    &:nth-child(2n + 1) {
+      @apply top-[-50px] md:top-[-200px];
+
+      &.visible {
+        @apply top-0 opacity-100;
+      }
+    }
+  }
+}

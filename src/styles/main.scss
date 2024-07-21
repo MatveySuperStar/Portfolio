@@ -1,9 +1,41 @@
 @import "./fonts.scss";
 
-section {
+section,
+footer {
   @apply px-5;
 
   & > div {
-    @apply max-w-[1296px] mx-auto;
+    @apply mb-16 md:mb-[72px] max-w-[1296px]  mx-auto;
   }
+
+  & div.text {
+    @apply max-w-[780px] mx-auto w-full;
+
+    p {
+      @apply leading-9;
+    }
+
+    a {
+      @apply lg:hover:underline font-medium;
+    }
+  }
+
+  h4 {
+    @apply mb-5;
+  }
+}
+
+section:first-child > div {
+  @apply md:mt-[228px] mt-40;
+}
+
+header > div {
+  @apply max-w-[1346px] px-5 mx-auto;
+}
+
+.typed-cursor {
+  font-size: 64px;
+
+  line-height: 87px;
+  letter-spacing: 0em;
 }

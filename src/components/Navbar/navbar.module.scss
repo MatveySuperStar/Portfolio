@@ -1,0 +1,17 @@
+@keyframes moveBottom {
+  from {
+    @apply -top-[81px];
+  }
+  to {
+    @apply top-0;
+  }
+}
+
+.header {
+  @apply fixed top-0 left-0 w-full z-[99]  bg-white bg-opacity-60;
+  animation: moveBottom 1.5s ease-in-out forwards;
+
+  & a {
+    @apply lg:hover:underline;
+  }
+}

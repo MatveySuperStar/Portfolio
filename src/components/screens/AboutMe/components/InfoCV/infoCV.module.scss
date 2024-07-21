@@ -1,0 +1,19 @@
+@keyframes moveBottom {
+  from {
+    @apply -top-[81px]  opacity-0;
+  }
+  to {
+    @apply top-0 opacity-100;
+  }
+}
+
+.wrapperInfo {
+  @apply flex flex-col lg:gap-20  gap-10 relative opacity-0;
+
+  & > div {
+    @apply flex flex-col lg:gap-20 gap-10;
+  }
+
+  animation: moveBottom 1s ease-in-out forwards;
+  animation-delay: 1s;
+}

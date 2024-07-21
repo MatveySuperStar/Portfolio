@@ -1,0 +1,37 @@
+.wrapperCard {
+  @apply w-full md:w-fit  relative;
+
+  .card {
+    @apply md:max-w-[540px] md:w-[calc(100vw/2-100px)] flex flex-col gap-5;
+
+    figure {
+      @apply h-[480px] md:h-[640px] w-full relative overflow-hidden rounded-3xl duration-500;
+
+      img {
+        @apply object-cover duration-1000 z-[1];
+      }
+
+      .imageSecond {
+        @apply opacity-0 z-[2];
+      }
+    }
+  }
+
+  &:hover .card {
+    figure {
+      @apply scale-95;
+    }
+
+    img {
+      @apply scale-[120%];
+
+      &.imageFirst {
+        @apply opacity-0;
+      }
+
+      &.imageSecond {
+        @apply scale-[120%] opacity-100;
+      }
+    }
+  }
+}

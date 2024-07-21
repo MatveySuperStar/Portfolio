@@ -1,0 +1,24 @@
+.select {
+  @apply relative;
+
+  & > button {
+    @apply w-full flex gap-1 justify-between hover:bg-gray-100 rounded-lg px-2 duration-700;
+  }
+
+  & > div {
+    @apply right-0 duration-500  rounded-lg 
+     overflow-hidden border border-black  absolute z-[100] invisible opacity-0 top-[80%];
+
+    &.active {
+      @apply visible opacity-100 top-full;
+    }
+
+    & > button {
+      @apply py-3 px-5 w-full flex gap-2 items-center  whitespace-nowrap hover:bg-gray-100 bg-white;
+
+      &.active {
+        @apply bg-gray-100;
+      }
+    }
+  }
+}

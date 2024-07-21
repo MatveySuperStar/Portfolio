@@ -70,7 +70,7 @@ const InfoCV: FC<{ language: "ru" | "eng" }> = ({ language }) => {
               <p>{content[language].about.contacts.info}</p>
             </div>
             <div className="flex flex-col gap-3">
-              <Link href="https://t.me/@MotoMotoo">Telegram</Link>
+              <Link href="https://t.me/MotoMotoo">Telegram</Link>
               <Link href="https://www.linkedin.com/in/matvey-sergeev-82641a230/">
                 Linkedin
               </Link>

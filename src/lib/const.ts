@@ -77,7 +77,7 @@ export const bestWorks = [
     },
   },
   {
-    title: "AEF",
+    title: "AES",
     images: [aefDesktop, aefMobile],
     href: "https://alfa-euro-stroy.vercel.app/",
     ru: { description: "Веб сайт покупки и аренды домов" },

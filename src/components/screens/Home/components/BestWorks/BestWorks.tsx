@@ -4,48 +4,59 @@ import { bestWorks } from "@/lib/const";
 import React, {
   createRef,
   FC,
-  ReactNode,
   useCallback,
+  useContext,
   useEffect,
-  useRef,
   useState,
 } from "react";
 import styles from "./bestWorks.module.scss";
+import {
+  IScrollContext,
+  ScrollContext,
+} from "@/components/Providers/ScrollContextProvider/ScrollContextProvider";
 
 const BestWorks: FC<{ language: "ru" | "eng" }> = ({ language }) => {
-  const lastItem = createRef<ReactNode>();
-  const observerLoader = useRef<any>(null);
+  const lastItem = createRef<HTMLAnchorElement>();
   const [indexTrigger, setIndexTrigger] = useState(-1);
-
-  const actionInSight = useCallback(
-    async (entries: any) => {
-      if (entries[0].isIntersecting && indexTrigger < bestWorks.length) {
-        setTimeout(() => setIndexTrigger((state) => state + 1), 700);
-      }
-    },
-    [indexTrigger]
-  );
+  const { setVisibleHobby } = useContext<IScrollContext>(ScrollContext);
 
   useEffect(() => {
-    if (observerLoader.current) {
-      observerLoader.current.disconnect();
-    }
+    setTimeout(() => {
+      setIndexTrigger(0);
+      if (window.innerWidth >= 768) {
+        setTimeout(() => setIndexTrigger(1), 500);
+      }
+    }, 900);
+  }, [setIndexTrigger]);
 
-    observerLoader.current = new IntersectionObserver(actionInSight);
-    if (lastItem.current) {
-      observerLoader.current.observe(lastItem.current);
+  const scrollHandler = useCallback(() => {
+    if (!!lastItem?.current) {
+      const additionalDistance =
+        window.innerWidth >= 768
+          ? (indexTrigger + 1) % 2 === 0
+            ? 0
+            : -200
+          : 0;
+
+      if (
+        lastItem.current?.offsetTop + additionalDistance - window.scrollY <=
+        0
+      ) {
+        setIndexTrigger((state) => state + 1);
+        if (indexTrigger + 1 >= bestWorks.length) {
+          setVisibleHobby(true);
+        }
+      }
     }
+  }, [indexTrigger, setIndexTrigger, setVisibleHobby, lastItem]);
+
+  useEffect(() => {
+    document.addEventListener("scroll", scrollHandler);
 
     return () => {
-      if (observerLoader.current) {
-        observerLoader.current.disconnect();
-      }
+      document.removeEventListener("scroll", scrollHandler);
     };
-  }, [lastItem, actionInSight]);
-
-  useEffect(() => {
-    setTimeout(() => setIndexTrigger(0), 900);
-  }, [setIndexTrigger]);
+  }, [scrollHandler]);
 
   const viewProjects = bestWorks.map((item, index) => {
     const setting = {

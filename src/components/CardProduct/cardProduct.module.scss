@@ -17,20 +17,22 @@
     }
   }
 
-  &:hover .card {
-    figure {
-      @apply scale-95;
-    }
-
-    img {
-      @apply scale-[120%];
-
-      &.imageFirst {
-        @apply opacity-0;
+  @media (min-width: 992px) {
+    &:hover .card {
+      figure {
+        @apply scale-95;
       }
 
-      &.imageSecond {
-        @apply scale-[120%] opacity-100;
+      img {
+        @apply scale-[120%];
+
+        &.imageFirst {
+          @apply opacity-0;
+        }
+
+        &.imageSecond {
+          @apply scale-[120%] opacity-100;
+        }
       }
     }
   }

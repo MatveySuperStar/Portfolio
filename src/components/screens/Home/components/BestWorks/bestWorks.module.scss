@@ -1,5 +1,5 @@
 .works {
-  @apply grid grid-cols-1 md:grid-cols-[repeat(2,auto)] justify-between pt-20 gap-y-10 md:gap-y-[100px] gap-x-[100px] pb-[200px];
+  @apply grid grid-cols-1 md:grid-cols-[repeat(2,auto)] justify-between pt-20 gap-y-10 md:gap-y-[100px] gap-x-[100px];
 
   & > a {
     @apply duration-1000 relative opacity-0;

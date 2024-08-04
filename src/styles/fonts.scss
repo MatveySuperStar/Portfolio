@@ -51,7 +51,8 @@ a,
 label,
 input,
 textarea,
-span {
+span,
+li {
   font-family: var(--font-nunito) !important;
   font-size: 20px;
   font-weight: 400;
@@ -107,7 +108,8 @@ span {
   label,
   input,
   textarea,
-  span {
+  span,
+  li {
     font-size: 17px;
     font-weight: 400;
     line-height: 24px;

@@ -9,7 +9,7 @@ const CardProduct: FC<{
   title: string;
   description: string;
   images: StaticImageData[];
-  refLink?: any;
+  refLink?: React.LegacyRef<HTMLAnchorElement>;
   className?: string;
 }> = ({ images, href, alt, title, description, refLink, className = "" }) => {
   return (
@@ -25,6 +25,7 @@ const CardProduct: FC<{
             src={images?.[0]}
             alt={alt}
             className={`${images.length === 2 ? styles.imageFirst : ""}`}
+            placeholder="blur"
             fill
           />
           {images.length === 2 && (
@@ -32,6 +33,7 @@ const CardProduct: FC<{
               src={images?.[1]}
               alt={alt}
               fill
+              placeholder="blur"
               className={styles.imageSecond}
             />
           )}

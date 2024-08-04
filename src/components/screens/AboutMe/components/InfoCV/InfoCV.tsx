@@ -18,12 +18,17 @@ const InfoCV: FC<{ language: "ru" | "eng" }> = ({ language }) => {
     },
     {
       title: content[language].about.workExperiences.title,
-      className: "md:grid-cols-[repeat(2,auto)]",
+
       description: content[language].about.workExperiences.works.map((item) => (
         <div key={item.JobTitle}>
           <p className="h5">{item.JobTitle}</p>
           <p>{item.placeWork}</p>
-          <p className="caption !leading-4 text-gray-500">{item.date}</p>
+          <p className="caption !leading-4 text-gray-500 mb-3">{item.date}</p>
+          <ul className="list-disc pl-5 body-3 flex flex-col gap-y-3">
+            {item.description.map((subitem) => (
+              <li key={subitem}>{subitem}</li>
+            ))}
+          </ul>
         </div>
       )),
     },
@@ -32,9 +37,7 @@ const InfoCV: FC<{ language: "ru" | "eng" }> = ({ language }) => {
   const viewInfo = dataInfo.map((item) => (
     <div key={item.title}>
       <h4>{item.title}</h4>
-      <div className={`grid gap-8 justify-between ${item.className}`}>
-        {item.description}
-      </div>
+      <div className="grid gap-8 justify-between">{item.description}</div>
     </div>
   ));
 
@@ -70,8 +73,16 @@ const InfoCV: FC<{ language: "ru" | "eng" }> = ({ language }) => {
               <p>{content[language].about.contacts.info}</p>
             </div>
             <div className="flex flex-col gap-3">
-              <Link href="https://t.me/MotoMotoo">Telegram</Link>
-              <Link href="https://www.linkedin.com/in/matvey-sergeev-82641a230/">
+              <Link target="_blank" href="/cv.pdf">
+                CV PDF
+              </Link>
+              <Link target="_blank" href="https://t.me/MotoMotoo">
+                Telegram
+              </Link>
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/in/matvey-sergeev-82641a230/"
+              >
                 Linkedin
               </Link>
             </div>

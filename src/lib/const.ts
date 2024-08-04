@@ -19,6 +19,9 @@ import aefMobile from "@/public/projects/aef-mobile.png";
 import prokatchikDesktop from "@/public/projects/prokatchik-desktop.png";
 import prokatchikMobile from "@/public/projects/prokatchik-mobile.png";
 
+import balmyDesktop from "@/public/projects/balmy-desktop.png";
+import balmyMobile from "@/public/projects/balmy-mobile.png";
+
 // import prokatchik from "@/public/projects/prokatchik.png";
 // import aef from "@/public/projects/aef.png";
 // import sauletta from "@/public/projects/sauletta.png";
@@ -43,7 +46,7 @@ export const bestWorks = [
   {
     title: "Royal spa",
     images: [royalDescktop, royalMobile],
-    href: "http://178.172.244.147:3000/",
+    href: "https://royalthaispa.by/",
     ru: { description: "Веб сайт спа салона в Минске" },
     eng: {
       description: "Website of a spa salon in Minsk",
@@ -88,13 +91,25 @@ export const bestWorks = [
   {
     title: "Prokatchik",
     images: [prokatchikDesktop, prokatchikMobile],
-    href: "https://prokatchik.vercel.app/",
+    href: "https://prokatchik.by/",
     ru: {
       description:
         "Веб сайт аренды строительных иструментов и медицинских приспособлений",
     },
     eng: {
       description: "Website for renting construction tools and medical devices",
+    },
+  },
+  {
+    title: "Balmy",
+    images: [balmyDesktop, balmyMobile],
+    href: "https://balmy.by/",
+    ru: {
+      description:
+        "Веб сайт продающий профессиональную косметика для волос и бороды",
+    },
+    eng: {
+      description: "Website selling professional hair and beard cosmetics",
     },
   },
   // {
@@ -119,6 +134,11 @@ export const bestWorks = [
   //     description: "Admin panel developed based on the antd ui library",
   //   },
   // },
+];
+
+export const hobby = [
+  "https://www.youtube.com/embed/ZVrD_EVkMgM?si=P3JCJUcjqBe8JQSU",
+  "https://www.youtube.com/embed/XNVaOXV0PlA",
 ];
 
 // export const projects = [
@@ -184,6 +204,7 @@ export const content = {
     home: {
       mainSection: "React developer из Беларуси",
       portfolioTitle: "Лучшие работы",
+      hobbyTitle: "Хобби",
     },
     about: {
       title: "Веб разработчик с JavaScript направленностью",
@@ -200,17 +221,40 @@ export const content = {
             placeWork: "Web space",
             href: "https://web-space.by/",
             date: "2022 Ноябрь - Сейчас",
+            description: [
+              "Разработка клиент-серверных веб приложений с внедрением интерак  тивных элементов реализованных с помощью препроцессора tailwind, библиотек gsap, framer motion;",
+              "Создание ui-kit для каждого проекта;",
+              "Создание Админ панели с помощью ui библиотеки antd;",
+              "Использование библиотек state-management Redux, Mobx для хранения товаров, расчета и в последущем отправку на оплату.",
+              "Отправка сообщений об обратной связи реализованных в Node.js, отправка и создание .pdf и .html файлов;",
+              "Создание веб-приложений в соответствии с макетом (pixel perfect);",
+              "Реализация серверных и клиентских компонентов с помощью фреймворка Next.js, использование динамического импорта, динамиских роутов, SSG рендеринга;",
+              "Дополнение Backend части с помощью Next route.",
+            ],
           },
           {
             JobTitle: "React developer",
             placeWork: "Freelance",
-            date: "2022-2023",
+            date: "2022 Ноябрь - 2023 Ноябрь",
+            description: [
+              "Разработка коммерческих веб-приложений;",
+              "Внедрение различных систем оплат;",
+              "Внедрение веб-приложений в CMS;",
+              "Оптимизация уже готовых проектов, а именно рефакторинг кода, сокращение перерисовок virtual Dom и т.д;",
+              "Написание тестов - Jest.",
+            ],
           },
           {
             JobTitle: "React developer",
             placeWork: "Aheadworks",
             href: "https://aheadworks.com/",
             date: "2022 Апрель - 2022 Ноябрь",
+            description: [
+              "Разработка веб-приложений с помощью ui библиотеки Shopify и внедрение проектов в среду Shopify;",
+              "Разработка трекинга продукта с анализом данных и предоставлением их в графиках;",
+              "Реализация CMS системы для создания внешнего вида интернет магазина;",
+              "Создание мультиязычных приложений с системой подписок.",
+            ],
           },
         ],
       },
@@ -261,6 +305,7 @@ export const content = {
     home: {
       mainSection: "React developer from Belarus",
       portfolioTitle: "Best works",
+      hobbyTitle: "Hobby",
     },
     about: {
       title: "Web developer with JavaScript focus",
@@ -277,17 +322,40 @@ export const content = {
             placeWork: "Web space",
             href: "https://web-space.by/",
             date: "2022 November - Present",
+            description: [
+              "Development of client-server web applications with the implementation of interactive elements implemented using the tailwind preprocessor, gsap libraries, framer motion;",
+              "Creation of ui-kit for each project;",
+              "Creation of the Admin panel using the antd ui library;",
+              "Using state-management libraries Redux, Mobx for storing goods, calculating and then sending for payment;",
+              "Sending feedback messages implemented in Node.js, sending and creating .pdf and .html files;",
+              "Creating web applications in accordance with the layout (pixel perfect);",
+              "Implementation of server and client components using the Next.js framework, using dynamic import, dynamic routes, SSG rendering;",
+              "Supplementing the Backend part using Next route.",
+            ],
           },
           {
             JobTitle: "React developer",
             placeWork: "Freelance",
-            date: "2022-2023",
+            date: "2022 November - 2023 November",
+            description: [
+              "Development of commercial web applications;",
+              "Implementation of various payment systems;",
+              "Implementation of web applications in CMS;",
+              "Optimization of ready-made projects, namely code refactoring, reduction of virtual Dom redrawings, etc.;",
+              " Writing tests - Jest.",
+            ],
           },
           {
             JobTitle: "React developer",
             placeWork: "Aheadworks",
             href: "https://aheadworks.com/",
             date: "2022 April - 2022 November",
+            description: [
+              "Development of web applications using the Shopify ui library and implementation of projects in the Shopify environment;",
+              "Development of product tracking with data analysis and presentation in graphs;",
+              "Implementation of a CMS system for creating the appearance of an online store;",
+              "Creation of multilingual applications with a subscription system.",
+            ],
           },
         ],
       },

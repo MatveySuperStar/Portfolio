@@ -3,6 +3,8 @@ import BestWorks from "./components/BestWorks";
 import MainSection from "./components/MainSection";
 import Navbar from "@/components/Navbar";
 import { content } from "@/lib/const";
+import Hobby from "./components/Hobby";
+import ScrollContextProvider from "@/components/Providers/ScrollContextProvider";
 
 const Home: FC<{ language?: "ru" | "eng" }> = ({ language = "eng" }) => {
   return (
@@ -15,8 +17,11 @@ const Home: FC<{ language?: "ru" | "eng" }> = ({ language = "eng" }) => {
         language={language}
       />
       <main>
-        <MainSection language={language} />
-        <BestWorks language={language} />
+        <ScrollContextProvider>
+          <MainSection language={language} />
+          <BestWorks language={language} />
+          <Hobby language={language} />
+        </ScrollContextProvider>
       </main>
     </>
   );

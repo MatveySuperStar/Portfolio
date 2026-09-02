@@ -1,3 +1,5 @@
+import type { StaticImageData } from 'next/image';
+import type { AppConfig } from 'next-intl';
 import abametDesktop from '@/public/projects/abamet-desktop.png';
 import abametMobile from '@/public/projects/abamet-mobile.png';
 import aefDesktop from '@/public/projects/aef-desktop.png';
@@ -25,7 +27,14 @@ export const metatag = {
   },
 };
 
-export const bestWorks = [
+type ProjectId = keyof AppConfig['Messages']['Projects'];
+
+export const bestWorks: {
+  id: ProjectId;
+  title: string;
+  images: StaticImageData[];
+  href: string;
+}[] = [
   {
     id: 'abamet',
     title: 'Abamet',

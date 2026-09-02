@@ -2,19 +2,18 @@
   @apply relative;
 
   & > button {
-    @apply w-full flex gap-1 justify-between hover:bg-gray-100 rounded-lg px-2 duration-700;
+    @apply flex w-full justify-between gap-1 rounded-lg px-2 duration-700 hover:bg-gray-100;
   }
 
   & > div {
-    @apply right-0 duration-500  rounded-lg 
-     overflow-hidden border border-black  absolute z-[100] invisible opacity-0 top-[80%];
+    @apply invisible absolute right-0 top-[80%] z-[100] overflow-hidden rounded-lg border border-black opacity-0 duration-500;
 
     &.active {
-      @apply visible opacity-100 top-full;
+      @apply visible top-full opacity-100;
     }
 
     & > button {
-      @apply py-3 px-5 w-full flex gap-2 items-center  whitespace-nowrap hover:bg-gray-100 bg-white;
+      @apply flex w-full items-center gap-2 whitespace-nowrap bg-white px-5 py-3 hover:bg-gray-100;
 
       &.active {
         @apply bg-gray-100;

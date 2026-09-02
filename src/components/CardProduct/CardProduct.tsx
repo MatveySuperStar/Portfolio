@@ -1,7 +1,7 @@
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import React, { FC } from "react";
-import styles from "./cardProduct.module.scss";
+import { FC } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
+import styles from './cardProduct.module.scss';
 
 const CardProduct: FC<{
   href: string;
@@ -11,12 +11,12 @@ const CardProduct: FC<{
   images: StaticImageData[];
   refLink?: React.LegacyRef<HTMLAnchorElement>;
   className?: string;
-}> = ({ images, href, alt, title, description, refLink, className = "" }) => {
+}> = ({ images, href, alt, title, description, refLink, className = '' }) => {
   return (
     <Link
       href={href}
       ref={refLink}
-      className={`${styles.wrapperCard}  ${className}`}
+      className={`${styles.wrapperCard} ${className}`}
       target="_blank"
     >
       <div className={styles.card}>
@@ -24,7 +24,7 @@ const CardProduct: FC<{
           <Image
             src={images?.[0]}
             alt={alt}
-            className={`${images.length === 2 ? styles.imageFirst : ""}`}
+            className={`${images.length === 2 ? styles.imageFirst : ''}`}
             placeholder="blur"
             fill
           />
@@ -38,7 +38,7 @@ const CardProduct: FC<{
             />
           )}
         </figure>
-        <div className="text-center px-5">
+        <div className="px-5 text-center">
           <h3>{title}</h3>
           <p>{description}</p>
         </div>

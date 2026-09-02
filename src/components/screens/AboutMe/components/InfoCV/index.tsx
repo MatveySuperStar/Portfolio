@@ -1,3 +1,3 @@
-import InfoCV from "./InfoCV";
+import InfoCV from './InfoCV';
 
 export default InfoCV;

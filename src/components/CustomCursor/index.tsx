@@ -1,3 +1,3 @@
-import WrapperCursor from "./WrapperCursor";
+import WrapperCursor from './WrapperCursor';
 
 export default WrapperCursor;

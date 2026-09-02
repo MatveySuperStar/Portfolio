@@ -1,9 +1,11 @@
-"use client";
-import { useResize } from "@/hooks/use-resize";
-import dynamic from "next/dynamic";
-const CustomCursor = dynamic(() => import("./CustomCursor"), { ssr: false });
+'use client';
 
-const WrapperCursor = () => {
+import dynamic from 'next/dynamic';
+import { useResize } from '@/hooks/use-resize';
+
+const CustomCursor = dynamic(() => import('./CustomCursor'), { ssr: false });
+
+const WrapperCursor = (): React.ReactNode => {
   const { isScreenLg } = useResize();
 
   return isScreenLg && <CustomCursor />;

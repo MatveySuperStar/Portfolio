@@ -1,25 +1,26 @@
-import { content } from "@/lib/const";
-import Link from "next/link";
-import React, { FC } from "react";
-import styles from "./navbar.module.scss";
-import Select from "@/ui/Select";
-import SelectLanguages from "../SelectLanguages";
+'use client';
 
-const Navbar: FC<{
-  secondLink: { href: string; title: string };
-  language: "ru" | "eng";
-}> = ({ secondLink, language }) => {
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
+import SelectLanguages from '../SelectLanguages';
+import styles from './navbar.module.scss';
+
+const Navbar = (): React.ReactElement => {
+  const t = useTranslations('Navigation');
+  const pathname = usePathname();
+  const isAbout = pathname === '/about';
+
   return (
     <header className={styles.header}>
       <div>
-        <nav className="flex justify-between   py-5">
-          <Link href={`/${language}`} className="h4 navbarLink">
-            {content[language].system.navigation.home}
+        <nav className="flex justify-between py-5">
+          <Link href="/" className="h4 navbarLink">
+            {t('home')}
           </Link>
-          <div className="flex lg:gap-10 gap-5">
-            <SelectLanguages value={language} />
-            <Link className="h4 navbarLink" href={secondLink.href}>
-              {secondLink.title}
+          <div className="flex gap-5 lg:gap-10">
+            <SelectLanguages />
+            <Link className="h4 navbarLink" href={isAbout ? '/' : '/about'}>
+              {t(isAbout ? 'works' : 'aboutMe')}
             </Link>
           </div>
         </nav>

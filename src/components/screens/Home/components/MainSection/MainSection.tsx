@@ -1,26 +1,29 @@
-"use client";
-import { content } from "@/lib/const";
-import React, { FC, useEffect, useRef } from "react";
-import Typed from "typed.js";
+'use client';
 
-const MainSection: FC<{ language: "eng" | "ru" }> = ({ language }) => {
+import { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
+import Typed from 'typed.js';
+
+const MainSection = (): React.ReactElement => {
+  const t = useTranslations('Home');
   const el = useRef(null);
+  const text = t('mainSection');
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [content[language].home.mainSection],
+      strings: [text],
       typeSpeed: 150,
       startDelay: 100,
     });
 
-    return () => {
+    return (): void => {
       typed.destroy();
     };
-  }, [language]);
+  }, [text]);
 
   return (
     <section>
-      <div className="sm:min-h-[86px] min-h-[130px]">
+      <div className="min-h-[130px] sm:min-h-[86px]">
         <h1>
           <span className="h1" ref={el}></span>
         </h1>

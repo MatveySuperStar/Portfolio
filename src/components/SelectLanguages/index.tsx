@@ -1,3 +1,3 @@
-import SelectLanguages from "./SelectLanguages";
+import SelectLanguages from './SelectLanguages';
 
 export default SelectLanguages;

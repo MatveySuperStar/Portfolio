@@ -1,18 +1,18 @@
 .wrapperCard {
-  @apply w-full md:w-fit  relative;
+  @apply relative w-full md:w-fit;
 
   .card {
-    @apply md:max-w-[540px] md:w-[calc(100vw/2-100px)] flex flex-col gap-5;
+    @apply flex flex-col gap-5 md:w-[calc(100vw/2-100px)] md:max-w-[540px];
 
     figure {
-      @apply h-[480px] md:h-[640px] w-full relative overflow-hidden rounded-3xl duration-500;
+      @apply relative h-[480px] w-full overflow-hidden rounded-3xl duration-500 md:h-[640px];
 
       img {
-        @apply object-cover duration-1000 z-[1];
+        @apply z-[1] object-cover duration-1000;
       }
 
       .imageSecond {
-        @apply opacity-0 z-[2];
+        @apply z-[2] opacity-0;
       }
     }
   }

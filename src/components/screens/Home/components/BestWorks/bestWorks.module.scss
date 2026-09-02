@@ -1,14 +1,14 @@
 .works {
-  @apply grid grid-cols-1 md:grid-cols-[repeat(2,auto)] justify-between pt-20 gap-y-10 md:gap-y-[100px] gap-x-[100px];
+  @apply grid grid-cols-1 justify-between gap-x-[100px] gap-y-10 pt-20 md:grid-cols-[repeat(2,auto)] md:gap-y-[100px];
 
   & > a {
-    @apply duration-1000 relative opacity-0;
+    @apply relative opacity-0 duration-1000;
 
     &:nth-child(2n) {
-      @apply md:top-[0px] top-[-50px];
+      @apply top-[-50px] md:top-[0px];
 
       &.visible {
-        @apply md:top-[200px] top-0 opacity-100;
+        @apply top-0 opacity-100 md:top-[200px];
       }
     }
 

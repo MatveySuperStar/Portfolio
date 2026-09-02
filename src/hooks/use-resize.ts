@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from 'react';
 
 export const SCREEN_SM = 576;
 export const SCREEN_MD = 768;
@@ -6,22 +6,25 @@ export const SCREEN_LG = 992;
 export const SCREEN_XL = 1200;
 export const SCREEN_XXL = 1400;
 
-export const useResize = () => {
-  const [width, setWidth] = useState(0);
+const subscribe = (onStoreChange: () => void): (() => void) => {
+  window.addEventListener('resize', onStoreChange);
+  return (): void => {
+    window.removeEventListener('resize', onStoreChange);
+  };
+};
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
+const getSnapshot = (): number => window.innerWidth;
+const getServerSnapshot = (): number => 0;
 
-  useEffect(() => {
-    const handleResize = (event: any) => {
-      setWidth(event.target.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+export const useResize = (): {
+  width: number;
+  isScreenSm: boolean;
+  isScreenMd: boolean;
+  isScreenLg: boolean;
+  isScreenXl: boolean;
+  isScreenXxl: boolean;
+} => {
+  const width = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   return {
     width,

@@ -1,24 +1,31 @@
-"use client";
-import Select from "@/ui/Select";
-import { usePathname, useRouter } from "next/navigation";
-import React, { FC } from "react";
+'use client';
 
-const SelectLanguages: FC<{ value: "ru" | "eng" }> = ({ value }) => {
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
+import Select from '@/ui/Select';
+
+const SelectLanguages = (): React.ReactElement => {
+  const locale = useLocale();
   const pathname = usePathname();
-  const { push } = useRouter();
+  const router = useRouter();
 
   const options = [
-    { label: "Ru", value: "ru" },
-    { label: "Eng", value: "eng" },
+    { label: 'Ru', value: 'ru' },
+    { label: 'Eng', value: 'eng' },
   ];
 
-  const changeLanguage = (val: string) => {
-    const [firstPath, _secondPath, ...other] = pathname.split("/");
+  const changeLanguage = (val: string): void => {
+    if (!routing.locales.includes(val as (typeof routing.locales)[number])) {
+      return;
+    }
 
-    push(`${firstPath}/${val}${!!other.length ? `/${other.join("/")}` : ""}`);
+    router.replace(pathname, {
+      locale: val as (typeof routing.locales)[number],
+    });
   };
 
-  return <Select options={options} value={value} onChange={changeLanguage} />;
+  return <Select options={options} value={locale} onChange={changeLanguage} />;
 };
 
 export default SelectLanguages;

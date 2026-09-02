@@ -1,23 +1,11 @@
-@import "./fonts.scss";
+@import './fonts.scss';
 
 section,
 footer {
   @apply px-5;
 
   & > div {
-    @apply mb-16 md:mb-[72px] max-w-[1296px]  mx-auto;
-  }
-
-  & div.text {
-    @apply max-w-[780px] mx-auto w-full;
-
-    p {
-      @apply leading-9;
-    }
-
-    a {
-      @apply lg:hover:underline font-medium;
-    }
+    @apply mx-auto mb-16 max-w-[1296px] md:mb-[72px];
   }
 
   h4 {
@@ -26,11 +14,11 @@ footer {
 }
 
 section:first-child > div {
-  @apply md:mt-[228px] mt-40;
+  @apply mt-40 md:mt-[228px];
 }
 
 header > div {
-  @apply max-w-[1346px] px-5 mx-auto;
+  @apply mx-auto max-w-[1346px] px-5;
 }
 
 .typed-cursor {

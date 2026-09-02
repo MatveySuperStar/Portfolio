@@ -1,24 +1,15 @@
-"use client";
-import CardProduct from "@/components/CardProduct";
-import { bestWorks } from "@/lib/const";
-import React, {
-  createRef,
-  FC,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import styles from "./bestWorks.module.scss";
-import {
-  IScrollContext,
-  ScrollContext,
-} from "@/components/Providers/ScrollContextProvider/ScrollContextProvider";
+'use client';
 
-const BestWorks: FC<{ language: "ru" | "eng" }> = ({ language }) => {
+import { createRef, useCallback, useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { bestWorks } from '@/lib/const';
+import CardProduct from '@/components/CardProduct';
+import styles from './bestWorks.module.scss';
+
+const BestWorks = (): React.ReactElement => {
+  const t = useTranslations('Projects');
   const lastItem = createRef<HTMLAnchorElement>();
   const [indexTrigger, setIndexTrigger] = useState(-1);
-  const { setVisibleHobby } = useContext<IScrollContext>(ScrollContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,7 +20,7 @@ const BestWorks: FC<{ language: "ru" | "eng" }> = ({ language }) => {
     }, 900);
   }, [setIndexTrigger]);
 
-  const scrollHandler = useCallback(() => {
+  const scrollHandler = useCallback((): void => {
     if (!!lastItem?.current) {
       const additionalDistance =
         window.innerWidth >= 768
@@ -43,18 +34,15 @@ const BestWorks: FC<{ language: "ru" | "eng" }> = ({ language }) => {
         0
       ) {
         setIndexTrigger((state) => state + 1);
-        if (indexTrigger + 1 >= bestWorks.length) {
-          setVisibleHobby(true);
-        }
       }
     }
-  }, [indexTrigger, setIndexTrigger, setVisibleHobby, lastItem]);
+  }, [indexTrigger, setIndexTrigger, lastItem]);
 
   useEffect(() => {
-    document.addEventListener("scroll", scrollHandler);
+    document.addEventListener('scroll', scrollHandler);
 
-    return () => {
-      document.removeEventListener("scroll", scrollHandler);
+    return (): void => {
+      document.removeEventListener('scroll', scrollHandler);
     };
   }, [scrollHandler]);
 
@@ -62,7 +50,7 @@ const BestWorks: FC<{ language: "ru" | "eng" }> = ({ language }) => {
     const setting = {
       ...item,
       alt: item.title,
-      description: item[language].description,
+      description: t(item.id),
     };
 
     if (index === indexTrigger) {
@@ -80,14 +68,14 @@ const BestWorks: FC<{ language: "ru" | "eng" }> = ({ language }) => {
       <CardProduct
         key={item.title}
         {...setting}
-        className={index < indexTrigger ? styles.visible : ""}
+        className={index < indexTrigger ? styles.visible : ''}
       />
     );
   });
 
   return (
     <section>
-      <div className={styles.works}>{viewProjects}</div>
+      <div className={`${styles.works} pb-[200px]`}>{viewProjects}</div>
     </section>
   );
 };

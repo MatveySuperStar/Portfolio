@@ -1,3 +1,3 @@
-import CardProduct from "./CardProduct";
+import CardProduct from './CardProduct';
 
 export default CardProduct;

@@ -1,38 +1,39 @@
-"use client";
-import React, { useEffect } from "react";
-import styles from "./customCursor.module.scss";
+'use client';
 
-const CustomCursor = () => {
+import { useEffect } from 'react';
+import styles from './customCursor.module.scss';
+
+type CircleElement = HTMLDivElement & { x: number; y: number };
+
+const CustomCursor = (): React.ReactElement[] => {
   useEffect(() => {
     const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
+    const circles = document.querySelectorAll<CircleElement>('.circle');
 
-    circles.forEach(function (circle: any, index) {
+    circles.forEach((circle) => {
       circle.x = 0;
       circle.y = 0;
     });
 
-    window.addEventListener("mousemove", function (e) {
-      coords.x = e.clientX;
-      coords.y = e.clientY;
+    window.addEventListener('mousemove', (event) => {
+      coords.x = event.clientX;
+      coords.y = event.clientY;
     });
 
-    function animateCircles() {
+    function animateCircles(): void {
       let x = coords.x;
       let y = coords.y;
 
-      circles.forEach(function (circle: any, index) {
-        circle.style.left = x - 12 + "px";
-        circle.style.top = y - 12 + "px";
+      circles.forEach((circle, index) => {
+        circle.style.left = x - 12 + 'px';
+        circle.style.top = y - 12 + 'px';
 
-        circle.style.scale = (circles.length - index) / circles.length;
+        circle.style.scale = String((circles.length - index) / circles.length);
 
         circle.x = x;
         circle.y = y;
 
-        const nextCircle = (circles[index + 1] || circles[0]) as
-          | { x: number; y: number }
-          | any;
+        const nextCircle = circles[index + 1] || circles[0];
         x += (nextCircle.x - x) * 0.3;
         y += (nextCircle.y - y) * 0.3;
       });

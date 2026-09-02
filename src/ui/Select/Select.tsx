@@ -1,6 +1,7 @@
-"use client";
-import React, { FC, useEffect, useRef, useState } from "react";
-import styles from "./select.module.scss";
+'use client';
+
+import { FC, useEffect, useRef, useState } from 'react';
+import styles from './select.module.scss';
 
 const Select: FC<{
   options?: Array<{ value: string; label: string; viewLabel?: string }>;
@@ -11,31 +12,31 @@ const Select: FC<{
   value?: string;
 }> = ({
   options = [],
-  onChange = () => {},
+  onChange = (): void => {},
   disable = false,
-  className = "",
-  classNameOptions = "",
-  value = "",
-}) => {
+  className = '',
+  classNameOptions = '',
+  value = '',
+}): React.ReactElement => {
   const [active, setActive] = useState(false);
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
-  const handleClick = () => {
-    if (ref.current && !ref.current.contains(event?.target)) {
+  const handleClick = (event: MouseEvent): void => {
+    if (ref.current && !ref.current.contains(event.target as Node)) {
       setActive(false);
     }
   };
 
-  const changeValue = (type: { value: string }) => {
+  const changeValue = (type: { value: string }): void => {
     onChange(type.value);
     setActive(false);
   };
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClick);
+    document.addEventListener('mousedown', handleClick);
 
-    return () => {
-      document.addEventListener("mousedown", handleClick);
+    return (): void => {
+      document.removeEventListener('mousedown', handleClick);
     };
   }, []);
 
@@ -52,10 +53,10 @@ const Select: FC<{
         <span className="h4 navbarLink">{currentOption?.label}</span>
       </button>
 
-      <div className={`${active ? styles.active : ""}  ${classNameOptions}`}>
+      <div className={`${active ? styles.active : ''} ${classNameOptions}`}>
         {options?.map((type) => (
           <button
-            className={`${value === type?.value ? styles.active : ""} `}
+            className={`${value === type?.value ? styles.active : ''} `}
             type="button"
             key={type?.value}
             onClick={() => changeValue(type)}

@@ -2,28 +2,47 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "26.x"
+  },
   "scripts": {
+    "check-node": "node -e \"if (process.versions.node.split('.')[0] !== '26') { console.error('This project requires Node.js 26. Current: ' + process.version); process.exit(1); }\"",
+    "predev": "npm run check-node",
+    "prebuild": "npm run check-node",
+    "prestart": "npm run check-node",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "lint:fix": "eslint ./src --fix --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --write"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
-    "sass": "^1.77.8",
-    "sharp": "^0.33.4",
-    "typed.js": "^2.1.0"
+    "next": "^16.3.4",
+    "next-intl": "^4.14.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sass": "^1.103.1",
+    "sharp": "^0.35.4",
+    "typed.js": "^3.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
+    "@typescript-eslint/parser": "^8.58.2",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.3.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-unicorn": "^64.0.0",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "postcss": "^8.5.6",
+    "prettier": "^3.8.5",
+    "prettier-plugin-tailwindcss": "^0.7.4",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
   }
 }

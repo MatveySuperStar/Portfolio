@@ -1,0 +1,172 @@
+{
+  "Metadata": {
+    "homeTitle": "Porfolio MS",
+    "homeDescription": "Лол, это твое порфолио?",
+    "aboutTitle": "About MS",
+    "aboutDescription": "Немного информации обо мне"
+  },
+  "Navigation": {
+    "home": "Матвей Сергеев",
+    "aboutMe": "Обо мне",
+    "works": "Работы"
+  },
+  "Home": {
+    "mainSection": "Frontend developer из Беларуси"
+  },
+  "About": {
+    "title": "Frontend Developer, 4+ лет опыта",
+    "text": [
+      "Frontend-разработчик с 4+ годами коммерческого опыта. Глубокое знание JavaScript, TypeScript, React и Next.js. Специализируюсь на архитектуре сложных интерфейсов (Next.js/React), оптимизации производительности (Core Web Vitals) и интеграции с Headless CMS.",
+      "Регулярно провожу аудит производительности (Lighthouse, Core Web Vitals), обновляю зависимости, отслеживаю security-патчи и внедряю современные практики разработки."
+    ],
+    "workExperiences": {
+      "title": "Опыт работы",
+      "achievementsTitle": "Достижения",
+      "technologiesTitle": "Технологии",
+      "works": [
+        {
+          "jobTitle": "Frontend Developer",
+          "placeWork": "Nineseven",
+          "date": "Сентябрь 2024 — Сентябрь 2026",
+          "summary": "Разрабатывал высоконагруженные корпоративные админ-панели и мультиязычные Ecommerce-сайты. Отвечал за полный цикл разработки клиентской части: от проектирования архитектуры до оптимизации производительности, создания UI-библиотеки и обеспечения безопасности.",
+          "description": [
+            "Спроектировал и разработал несколько высоконагруженных веб-приложений с фокусом на скорость загрузки",
+            "Разработал и поддерживал автотесты для критически важных сценариев",
+            "Внедрил и развивал корпоративную UI-библиотеку (управление зависимостями, версионирование)",
+            "Адаптировал Ecommerce-шаблон под мобильное приложение на React Native (сенсорное управление, мобильные экраны)",
+            "Спроектировал и реализовал конфигуратор товара с динамической настройкой характеристик, логикой зависимых опций и автоматическим пересчётом цены",
+            "Оптимизировал работу с тяжелыми объектами: внедрил мемоизацию, виртуализацию списков и ленивую загрузку данных",
+            "Интегрировал клиентские платежные системы",
+            "Оптимизировал бандл: code splitting, анализ зависимостей через Bundle Analyzer",
+            "Внедрял системы веб-аналитики (Google Analytics, Яндекс.Метрика)",
+            "Вел техническую документацию проекта: README, JSDoc, руководства по установке и запуску",
+            "Использовал AI-ассистенты (Cursor) для автоматического обновления зависимостей, рефакторинга и синхронизации кода в микрофронтенд-проектах"
+          ],
+          "achievements": [
+            "Оптимизировал рендеринг через кеширование компонентов и Streaming SSR, добившись стабильного прохождения Core Web Vitals на всех типах устройств",
+            "Внедрил многоуровневую защиту форм (Rate Limiting + reCAPTCHA), полностью заблокировав автоматический спам",
+            "Интегрировал авторизацию через корпоративный OAuth сервис"
+          ],
+          "technologies": "TypeScript, React, Next, Vue, Nuxt, React Native, Redux Toolkit, Next Auth, Next Intl, Zustand, Shadcn, Tailwind CSS, Node.js, Express, PHP, Laravel, Vitest, Jest, Playwright, Storybook, Lighthouse"
+        },
+        {
+          "jobTitle": "Full-stack Developer",
+          "placeWork": "web-space",
+          "href": "https://web-space.by/",
+          "date": "Ноябрь 2023 — Сентябрь 2024",
+          "summary": "Разрабатывал клиент-серверные веб-приложения на Next.js с использованием современного стека (React, Redux, MobX, Tailwind CSS). Настраивал развертывание проектов на Vercel с использованием Docker и GitHub Actions. Создавал переиспользуемые UI-компоненты, админ-панели и интерактивные интерфейсы с анимацией.",
+          "description": [
+            "Разрабатывал клиентскую и серверную части приложений на Next.js (App Router, Route Handlers, API)",
+            "Создавал и поддерживал UI-kit для каждого проекта",
+            "Разрабатывал админ-панели на Ant Design",
+            "Реализовывал интерактивные элементы с анимацией (GSAP, Framer Motion)",
+            "Реализовывал кастомные анимации на основе математических формул с использованием requestAnimationFrame и Canvas",
+            "Настраивал стратегии рендеринга (SSG, ISR, SSR, динамический импорт, динамические роуты)",
+            "Внедрял управление состоянием через Redux и MobX (корзина, расчеты, оплата)",
+            "Реализовал интеграцию с Telegram Bot API для отправки уведомлений"
+          ],
+          "achievements": [
+            "Настроил автоматическую инвалидацию кэша Next.js через вебхуки WordPress (Headless): при обновлении контента в админке кэш перестраивается инкрементально (ISR), обновляя только измененные страницы",
+            "Интегрировал платежную систему с оплатой через WebSockets, обеспечив мгновенное обновление статуса транзакций без перезагрузки страницы",
+            "Реализовал автоматическую генерацию PDF-сертификатов с динамическими данными и отправкой на почту через Nodemailer"
+          ],
+          "technologies": "TypeScript, React, Next, WordPress, Redux Toolkit, Zustand, Tailwind CSS, Framer Motion, Lighthouse"
+        },
+        {
+          "jobTitle": "Full-stack Developer",
+          "placeWork": "Freelance",
+          "date": "Ноябрь 2022 — Ноябрь 2023",
+          "summary": "Разрабатывал коммерческие проекты с нуля под ключ: от архитектуры до деплоя. Внедрял платежные системы, Headless CMS и системы аналитики для отслеживания конверсий.",
+          "description": [
+            "Разрабатывал веб-приложения с нуля",
+            "Интегрировал платежные системы и CMS",
+            "Оптимизировал производительность (рефакторинг, Virtual DOM)",
+            "Покрывал код тестами (Jest), настраивал деплой и хостинг"
+          ],
+          "achievements": [
+            "Реализовал систему тестов для образовательной платформы с поддержкой разных типов вопросов, валидацией ответов, подсчетом проходного балла и отображением результатов в реальном времени"
+          ],
+          "technologies": "TypeScript, React, Next, WordPress, Redux Toolkit, Zustand, Tailwind CSS, Framer Motion, Lighthouse"
+        },
+        {
+          "jobTitle": "Frontend Developer",
+          "placeWork": "Aheadworks",
+          "href": "https://aheadworks.com/",
+          "date": "Апрель 2022 — Ноябрь 2022",
+          "summary": "Разрабатывал веб-приложения в экосистеме Shopify с использованием Shopify Polaris. Занимался созданием системы для управления контентом, разработкой трекинговых модулей и мультиязычных решений.",
+          "description": [
+            "Разрабатывал интерфейсы для Shopify-приложений с использованием Shopify Polaris UI",
+            "Реализовал систему трекинга продукта с анализом данных и визуализацией в графиках",
+            "Разрабатывал мультиязычные приложения с системой подписок"
+          ],
+          "achievements": [
+            "Спроектировал архитектуру Page Builder для Shopify-приложения с кастомной системой блоков, глобальным стейтом через Redux и полной мультиязычной поддержкой (i18n) для магазинов в разных регионах"
+          ],
+          "technologies": "TypeScript, React, MobX, Shopify, Redux, i18n, PHP, Laravel"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Навыки",
+      "technologies": [
+        {
+          "title": "Frontend:",
+          "technologies": "TypeScript, JavaScript (ES6+), React, Next.js, Vue, Nuxt, Redux Toolkit, Zustand, MobX, Framer Motion, React Native, Hooks, Context API"
+        },
+        {
+          "title": "Markup:",
+          "technologies": "HTML5, CSS3, SCSS/SASS, BEM, Responsive Design, Cross-browser layout, Tailwind CSS, Figma"
+        },
+        {
+          "title": "Performance:",
+          "technologies": "Lighthouse, Web Vitals (LCP/FCP/CLS), lazy loading, Webpack, Vite"
+        },
+        {
+          "title": "Testing:",
+          "technologies": "Jest, Vitest, Storybook, React Testing Library"
+        },
+        {
+          "title": "Tooling:",
+          "technologies": "Git, GitLab, ESLint, Prettier, Docker, CI/CD, Vercel"
+        },
+        {
+          "title": "Backend:",
+          "technologies": "Node.js, PHP, Laravel, REST API, PostgreSQL, Python, Django, WordPress (Headless CMS)"
+        },
+        {
+          "title": "Other:",
+          "technologies": "SSR, CSR, SPA, PPR (Partial Prerendering), Streaming, Sentry"
+        }
+      ]
+    },
+    "education": {
+      "title": "Образование",
+      "speciality": "Программист-дизайнер, Дизайн электронных и веб-изданий",
+      "place": "Белорусский государственный технологический университет • Минск",
+      "date": "2018-2022"
+    },
+    "languages": {
+      "title": "Языки",
+      "items": [
+        "Russian — C2 (Native)",
+        "English — B1 (Intermediate)"
+      ]
+    },
+    "contacts": {
+      "title": "Контакт",
+      "info": "Если вы человек, который хочет мне сделать предложение, от которого я не смогу отказаться, или просто человек (не робот), с удовольстием с вами пообщаюсь! Сейчас ищу новые возможности.",
+      "cv": "/MatveySergeev_CV_RU.pdf",
+      "cvLabel": "CV PDF"
+    }
+  },
+  "Projects": {
+    "abamet": "Интернет-магазин промышленных станков и оснащения для металлообработки",
+    "atlantm": "Сайт автодилера: новые и б/у автомобили, сервис и финансовые услуги",
+    "royalSpa": "Веб сайт спа салона в Минске",
+    "masterMod": "Интернет магазин авторской одежды",
+    "bauntySpa": "Веб сайт спа салона в Гродно",
+    "webSpace": "Веб сайт компании",
+    "aes": "Веб сайт покупки и аренды домов",
+    "balmy": "Веб сайт продающий профессиональную косметика для волос и бороды"
+  }
+}

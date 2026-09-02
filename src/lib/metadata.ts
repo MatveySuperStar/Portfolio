@@ -69,6 +69,10 @@ export function createPageMetadata({
       index: true,
       follow: true,
     },
+    icons: {
+      icon: '/favicon.png',
+      apple: '/apple-icon.png',
+    },
     alternates: {
       canonical: pageUrl,
       languages: {

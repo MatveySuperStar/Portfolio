@@ -1,16 +1,24 @@
 import { Metadata } from 'next';
+import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { metatag } from '@/lib/const';
+import { createPageMetadata } from '@/lib/metadata';
 import Home from '@/components/screens/Home';
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('Metadata');
+type Props = {
+  params: Promise<{ locale: Locale }>;
+};
 
-  return {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+  return createPageMetadata({
+    locale,
     title: t('homeTitle'),
     description: t('homeDescription'),
-    ...metatag,
-  };
+    imageAlt: t('ogImageAlt'),
+    siteName: t('siteName'),
+  });
 }
 
 export default function HomePage(): React.ReactElement {

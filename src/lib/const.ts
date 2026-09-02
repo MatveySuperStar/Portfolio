@@ -17,16 +17,6 @@ import royalMobile from '@/public/projects/royal-mobile.png';
 import webSpaceDesktop from '@/public/projects/web-space-desktop.png';
 import webSpaceMobile from '@/public/projects/web-space-mobile.png';
 
-export const metatag = {
-  type: 'website',
-  openGraph: {
-    images: [{ url: `${process.env.NEXT_PUBLIC_HOME_URL}/openGraphImage.png` }],
-  },
-  twitter: {
-    images: [{ url: `${process.env.NEXT_PUBLIC_HOME_URL}/openGraphImage.png` }],
-  },
-};
-
 type ProjectId = keyof AppConfig['Messages']['Projects'];
 
 export const bestWorks: {

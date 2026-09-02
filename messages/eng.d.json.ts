@@ -3,10 +3,12 @@
 
 declare const messages: {
   "Metadata": {
-    "homeTitle": "Porfolio MS",
-    "homeDescription": "wow, wow, it's your portfolio?",
-    "aboutTitle": "About MS",
-    "aboutDescription": "A little information about me"
+    "siteName": "Matvey Sergeev",
+    "homeTitle": "Matvey Sergeev — Frontend Developer",
+    "homeDescription": "Portfolio of Matvey Sergeev, a frontend developer from Belarus specializing in React, Next.js, TypeScript, and modern web interfaces.",
+    "aboutTitle": "About — Matvey Sergeev",
+    "aboutDescription": "Frontend developer with 4+ years of experience in React, Next.js, TypeScript, performance optimization, and Headless CMS integration.",
+    "ogImageAlt": "Matvey Sergeev, frontend developer — React, Next.js, TypeScript"
   },
   "Navigation": {
     "home": "Matvey Sergeev",

@@ -1,9 +1,11 @@
 {
   "Metadata": {
-    "homeTitle": "Porfolio MS",
-    "homeDescription": "Лол, это твое порфолио?",
-    "aboutTitle": "About MS",
-    "aboutDescription": "Немного информации обо мне"
+    "siteName": "Матвей Сергеев",
+    "homeTitle": "Матвей Сергеев — Frontend Developer",
+    "homeDescription": "Портфолио Матвея Сергеева, frontend-разработчика из Беларуси. React, Next.js, TypeScript и современные веб-интерфейсы.",
+    "aboutTitle": "Обо мне — Матвей Сергеев",
+    "aboutDescription": "Frontend-разработчик с опытом 4+ лет: React, Next.js, TypeScript, оптимизация производительности и интеграция Headless CMS.",
+    "ogImageAlt": "Матвей Сергеев, frontend-разработчик — React, Next.js, TypeScript"
   },
   "Navigation": {
     "home": "Матвей Сергеев",
@@ -147,10 +149,7 @@
     },
     "languages": {
       "title": "Языки",
-      "items": [
-        "Russian — C2 (Native)",
-        "English — B1 (Intermediate)"
-      ]
+      "items": ["Russian — C2 (Native)", "English — B1 (Intermediate)"]
     },
     "contacts": {
       "title": "Контакт",

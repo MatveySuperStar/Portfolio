@@ -3,13 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "26.x"
+    "node": "24.x"
   },
   "scripts": {
-    "check-node": "node -e \"if (process.versions.node.split('.')[0] !== '26') { console.error('This project requires Node.js 26. Current: ' + process.version); process.exit(1); }\"",
-    "predev": "npm run check-node",
-    "prebuild": "npm run check-node",
-    "prestart": "npm run check-node",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -28,7 +24,7 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/node": "^26.4.1",
+    "@types/node": "^24",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "@typescript-eslint/eslint-plugin": "^8.58.2",
